@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+Dir[File.dirname(__FILE__) + '/../lib/*.rb'].each { |file| require File.expand_path(file) }
+include Build
+
+#config:
+CRUISE_URL = 'http://my.build.server/projects/myproject.rss'
+STORAGE_PATH = File.dirname(__FILE__) + '/latest.build.info'
+
+# use Monitor.failures_on(..) to monitor failures only,
+# Monitor.all_builds_on(..) to monitor all new builds
+
+# available servers:
+# cruise_at(rss_feed_url, storage_path)
+# hudson_at(atom_feed_url, storage_path)
+
+monitor = Monitor.all_builds_on(cruise_at(CRUISE_URL, STORAGE_PATH))
+monitor.sync

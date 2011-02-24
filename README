@@ -1,0 +1,46 @@
+=== What's this?
+
+Cruise-monitor is, well, a monitor to CruiseControl build status, via RSS feed. It uses
+MacOS 'say' command for notifications.
+
+It then turned out to be quite good to integrate with other build servers: so far, only 
+CriseControl.rb and Hudson are supported, but plans are to support CC and CC.NET as well (see TODO).
+
+For any additional info and documentation, please refer to:
+	http://opensource.sourcesense.com/confluence/display/AGT/Cruise+Monitor
+
+=== How to use it
+
+Cruise-monitor is a ruby script. It requires gem and rake.
+
+First install required gems:
+   sudo gem install httpclient nokogiri
+
+Then, run all tests with:
+   rake
+
+Cruise-monitor is shipped with a sample script. Copy it to cruise_monitor.rb:
+	cp script/cruise_monitor.rb.example script/cruise_monitor.rb
+
+To configure, simply edit CRUISE_URL into script/cruise_monitor.rb.
+
+Set script executable, with
+	chmod +x ./script/cruise_monitor.rb
+
+Try to run it:
+   ./script/cruise_monitor.rb
+
+Finally, you can schedule a cron job (with crontab -e), like this:
+
+   */5 * * * * /$path_to_cruise_monitor/script/cruise_monitor.rb
+
+where $path_to_cruise_monitor links to the folder you have copied Cruise-monitor into.
+
+That's it. Have fun, and keep the build clean!
+
+=== License:
+
+Licensed under the Apache License, Version 2.0. See LICENSE for details.
+
+Copyright 2009 Sourcesense http://www.sourcesense.com
+

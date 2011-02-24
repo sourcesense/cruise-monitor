@@ -1,0 +1,15 @@
+<rss version="2.0">
+  <channel>
+    <title>CruiseControl RSS feed for myproject</title>
+    <link>http://my.build.server/projects/myproject</link>
+    <language>en-us</language>
+    <ttl>10</ttl>
+    <item>
+      <title>myproject build 22371 success</title>
+      <description></description>
+      <pubDate>Fri, 14 Aug 2009 10:48:39 Z</pubDate>
+      <guid>http://my.build.server/builds/myproject/22371</guid>
+      <link>http://my.build.server/builds/myproject/22371</link>
+    </item>
+  </channel>
+</rss>

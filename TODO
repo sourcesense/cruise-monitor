@@ -1,0 +1,8 @@
+- build is *still* broken, when after 30 minutes no-one has fixed it
++ don't notify success if build is still clean
++ don't update latest.build.info if nothing changed
+- minimal configuration: server/port, project name
+- support for CruiseControl and CruiseControl.NET
++ support for Hudson
+- multiple projects monitoring
+- rdoc documentation

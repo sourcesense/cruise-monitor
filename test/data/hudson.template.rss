@@ -1,0 +1,16 @@
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title></title>
+	<link/>
+	<updated></updated>
+	<author>
+		<name></name>
+	</author>
+	<id></id>
+	<entry>
+		<title>@TOKEN@</title>
+		<link/>
+		<id></id>
+		<published></published>
+		<updated></updated>
+	</entry>
+</feed>

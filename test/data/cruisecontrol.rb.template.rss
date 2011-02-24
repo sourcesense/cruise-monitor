@@ -1,0 +1,15 @@
+<rss version="2.0">
+  <channel>
+    <title></title>
+    <link></link>
+    <language></language>
+    <ttl></ttl>
+    <item>
+      <title>@TOKEN@</title>
+      <description></description>
+      <pubDate></pubDate>
+      <guid></guid>
+      <link></link>
+    </item>
+  </channel>
+</rss>
