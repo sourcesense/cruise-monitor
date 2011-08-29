@@ -4,6 +4,7 @@ include Build
 class RssAndFileTest < Test::Unit::TestCase
   
   STORAGE_FILE = '/tmp/latest.info'
+  ANY_URL = 'http://localhost:10123/any-resource'
   
   def setup
     Utils.delete_if_exists(STORAGE_FILE)
@@ -23,7 +24,7 @@ class RssAndFileTest < Test::Unit::TestCase
     Utils.write_content(STORAGE_FILE, 'myproject build 1000 failed')
     @server.prepare(feed_file('cruisecontrol.rb.success.rss'))
 
-    monitor = Monitor.failures_on(cruise_at('http://localhost:10123/any-resource', STORAGE_FILE), @notifier)
+    monitor = Monitor.failures_on(cruise_at(ANY_URL, STORAGE_FILE), @notifier)
     monitor.sync
     
     assert @notifier.has_notified_success
@@ -33,7 +34,7 @@ class RssAndFileTest < Test::Unit::TestCase
     Utils.write_content(STORAGE_FILE, 'myproject build 1000 success')
     @server.prepare(feed_file('cruisecontrol.rb.failed.rss'))
     
-    monitor = Monitor.failures_on(cruise_at('http://localhost:10123/any-resource', STORAGE_FILE), @notifier)
+    monitor = Monitor.failures_on(cruise_at(ANY_URL, STORAGE_FILE), @notifier)
     monitor.sync
     
     assert @notifier.has_warned
@@ -42,10 +43,28 @@ class RssAndFileTest < Test::Unit::TestCase
   def test_support_monitoring_on_each_success
     @server.prepare(feed_file('cruisecontrol.rb.success.rss'))
 
-    monitor = Monitor.all_builds_on(cruise_at('http://localhost:10123/any-resource', STORAGE_FILE), @notifier)
+    monitor = Monitor.all_builds_on(cruise_at(ANY_URL, STORAGE_FILE), @notifier)
     monitor.sync
     
     assert @notifier.has_notified_success
   end
   
+  def test_support_hudson_on_success
+    @server.prepare(feed_file('hudson.success.rss'))
+
+    monitor = Monitor.all_builds_on(hudson_at(ANY_URL, STORAGE_FILE), @notifier)
+    monitor.sync
+    
+    assert @notifier.has_notified_success
+  end
+
+  def test_support_hudson_on_failures
+    @server.prepare(feed_file('hudson.failed.rss'))
+
+    monitor = Monitor.all_builds_on(hudson_at(ANY_URL, STORAGE_FILE), @notifier)
+    monitor.sync
+    
+    assert @notifier.has_warned
+  end
+
 end

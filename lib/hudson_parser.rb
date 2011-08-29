@@ -9,7 +9,13 @@ class HudsonParser
     number = Text.words_in(title).at(1).gsub('#', '')
     status = Text.words_in(title).at(2).gsub('(', '').gsub(')', '')
     
-    "Hudson #{project_name} #{number} #{status.downcase}"
+    "Hudson #{project_name} #{number} #{as_status(status)}"
   end
   
+private
+  
+  def as_status status
+    return status.downcase if status == 'SUCCESS'
+    return 'failed'
+  end
 end

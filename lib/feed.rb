@@ -13,8 +13,8 @@ class Feed
   end
   
   def latest_info
-    feed = Nokogiri::XML(@connector.content)
-    @parser.parse(feed)
+    xml_feed = Nokogiri::XML(@connector.content)
+    @parser.parse(xml_feed)
   end
   
 end

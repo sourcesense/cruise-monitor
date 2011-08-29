@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>myproject all builds</title>
+	<link type="text/html" rel="alternate" href="http://smelly:8080/job/myproject/"/>
+	<updated>2009-08-17T20:45:12Z</updated>
+	<author>
+		<name>Hudson Server</name>
+	</author>
+	<id>urn:uuid:903deee0-7bfa-11db-9fe1-0800200c9a66</id>
+	<entry>
+		<title>myproject #23 (SUCCESS)</title>
+		<link type="text/html" rel="alternate" href="http://smelly:8080/job/myproject/23/"/>
+		<id>tag:hudson.dev.java.net,2009:myproject:2009-08-17_22-45-12</id>
+		<published>2009-08-17T20:45:12Z</published>
+		<updated>2009-08-17T20:45:12Z</updated>
+	</entry>
+</feed>
