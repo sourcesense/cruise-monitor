@@ -15,7 +15,7 @@ class HudsonParser
 private
 
   def as_number(string)
-    string.gsub!('#', '')
+    string.gsub('#', '')
   end
   
   def as_status(string)
