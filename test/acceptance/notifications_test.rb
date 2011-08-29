@@ -22,10 +22,8 @@ class NotificationsTest < Test::Unit::TestCase
     @monitor.sync
     
     assert_equal :failed, @server.status
-    
     assert @notifier.has_warned
   end
-
   
   def test_only_notify_success_on_new_builds
     previous_and_current_are(
@@ -49,17 +47,49 @@ class NotificationsTest < Test::Unit::TestCase
     
     assert @notifier.has_notified_success
   end
+  
+  def test_hudson_support_on_failures
+    previous_and_current_are_on_hudson(
+      'myproject #23 (SUCCESS)', 
+      'myproject #22 (FAILURE)'
+    )
+    
+    @monitor.sync
+    
+    assert_equal :failed, @server.status
+    assert @notifier.has_warned
+  end
+
+  def test_hudson_support_on_success
+    previous_and_current_are_on_hudson(
+      'myproject #23 (SUCCESS)', 
+      'myproject #22 (SUCCESS)'
+    )
+    
+    @monitor.enthusiast = true
+    @monitor.sync
+
+    assert @notifier.has_notified_success
+  end
 
 private
 
-  def previous_and_current_are(previous, current)  
+  def previous_and_current_are(previous, current)
+    prepare_test_data_for(previous, current, CruiseControlRbParser.new, 'cruisecontrol.rb')
+  end
+  
+  def previous_and_current_are_on_hudson(previous, current)
+    prepare_test_data_for(previous, current, HudsonParser.new, 'hudson')
+  end
+  
+  def prepare_test_data_for(previous, current, parser, build_server)
     storage = StubStorage.new
     storage.content = previous
     
-    connector = FakeConnector.new(feed_file('cruisecontrol.rb.template.rss'))
+    connector = FakeConnector.new(feed_file("#{build_server}.template.rss"))
     connector.item_title = current
     
-    @server = Server.new(Feed.new(connector, CruiseControlRbParser.new), storage)
+    @server = Server.new(Feed.new(connector, parser), storage)
     
     @notifier = StubNotifier.new    
     @monitor = Monitor.new(@server, @notifier)
