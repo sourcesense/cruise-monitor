@@ -19,7 +19,7 @@ private
   end
   
   def as_status(string)
-    status = string.gsub!('(', '').gsub!(')', '')
+    status = string.gsub('(', '').gsub(')', '')
 
     return status.downcase if status == 'SUCCESS'
     return 'failed'
