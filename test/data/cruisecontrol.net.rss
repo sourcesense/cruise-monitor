@@ -1,1 +1,356 @@
-<CruiseControl><Projects><Project name="CCNet" category="" activity="Sleeping" status="Running" lastBuildStatus="Exception" lastBuildLabel="1.5.0.6131" lastBuildTime="2009-08-16T01:16:20.859375-05:00" nextBuildTime="2009-08-16T05:25:26.5-05:00" webUrl="http://ccnetlive.thoughtworks.com/ccnet/server/local/project/CCNet/ViewLatestBuildReport.aspx" buildStage="" serverName="CCNETLIVE" /><Project name="CCNet 1.4.4" category="" activity="Sleeping" status="Running" lastBuildStatus="Success" lastBuildLabel="1.4.4.121" lastBuildTime="2009-08-15T18:06:23.96875-05:00" nextBuildTime="2009-08-16T05:25:27.578125-05:00" webUrl="http://ccnetlive.thoughtworks.com/ccnet/server/local/project/CCNet/ViewLatestBuildReport.aspx" buildStage="" serverName="CCNETLIVE" /><Project name="Ivy.NET" category="" activity="Sleeping" status="Running" lastBuildStatus="Success" lastBuildLabel="1.0.0.139" lastBuildTime="2009-08-15T17:51:44.65625-05:00" nextBuildTime="2009-08-16T05:22:37.734375-05:00" webUrl="http://ccnetlive.thoughtworks.com/ccnet/server/local/project/Ivy.NET/ViewLatestBuildReport.aspx" buildStage="" serverName="CCNETLIVE" /><Project name="ccnetlive" category="" activity="Sleeping" status="Running" lastBuildStatus="Success" lastBuildLabel="592" lastBuildTime="2009-08-14T03:00:35.375-05:00" nextBuildTime="2009-08-16T05:22:49.875-05:00" webUrl="http://CCNETLIVE/ccnet" buildStage="" serverName="CCNETLIVE" /><Project name="DBDeploy.NET" category="" activity="Sleeping" status="Running" lastBuildStatus="Exception" lastBuildLabel="1.0.0.82" lastBuildTime="2009-08-14T11:03:45.53125-05:00" nextBuildTime="2009-08-16T05:22:31.859375-05:00" webUrl="http://ccnetlive.thoughtworks.com/ccnet/server/local/project/DBDeploy.NET/ViewLatestBuildReport.aspx" buildStage="" serverName="CCNETLIVE" /><Project name="NetReflector" category="" activity="Sleeping" status="Running" lastBuildStatus="Success" lastBuildLabel="1.0.0.55" lastBuildTime="2009-08-15T17:56:57.546875-05:00" nextBuildTime="2009-08-16T05:25:28.703125-05:00" webUrl="http://ccnetlive.thoughtworks.com/ccnet/server/local/project/NetReflector/ViewLatestBuildReport.aspx" buildStage="" serverName="CCNETLIVE" /></Projects><Queues><Queue name="CCNet" /><Queue name="ccnetlive" /><Queue name="DBDeploy.NET" /><Queue name="Ivy.NET" /></Queues></CruiseControl>
+<rss version="2.0">
+  <channel>
+    <title>CruiseControl.Net - SharpDevelop-MAIN-CI</title>
+    <link>http://build.sharpdevelop.net/ccnet/</link>
+    <description>Latest build results for 'SharpDevelop-MAIN-CI'</description>
+    <language>en</language>
+    <ttl>5</ttl>
+    <generator>CruiseControl.Net</generator>
+    <item>
+      <title>Build 28 : Success  5 changed files found in build  First Comment : Visibility support for Matrix Control.</title>
+      <description>5 changed files found in build</description>
+      <guid>8edf502e-80bb-4ef5-95f4-09ae94aef493</guid>
+      <pubDate>Sun, 04 Sep 2011 13:49:00 GMT</pubDate>
+      <encoded xmlns="http://purl.org/rss/1.0/modules/content/"><![CDATA[<h4>Modifications in build :</h4>
+<table cellpadding="5">
+<tr><td>Tomas Linhart</td><td>Visibility support for Matrix Control.</td></tr>
+</table>
+<h4>Detailed information of the modifications in the build :</h4>
+<table cellpadding="5">
+<tr><td><b>Tomas Linhart</b></td><td>Visibility support for Matrix Control.</td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/CodeQualityAnalysis.csproj</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Controls/DependencyMatrix.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Controls/MatrixControl.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Utility/Matrix.cs</font></td></tr>
+<tr><td><font size=2>Added</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Utility/VisibleMatrix.cs</font></td></tr>
+</table>
+]]></encoded>
+    </item>
+    <item>
+      <title>Build 29 : Success  3 changed files found in build  First Comment : Inform MatrixControl about expand/collapse of TreeView</title>
+      <description>3 changed files found in build</description>
+      <guid>c4f2f100-0962-4b3c-a9ec-0618863f184f</guid>
+      <pubDate>Sun, 04 Sep 2011 13:59:12 GMT</pubDate>
+      <encoded xmlns="http://purl.org/rss/1.0/modules/content/"><![CDATA[<h4>Modifications in build :</h4>
+<table cellpadding="5">
+<tr><td>PeterForstmeier</td><td>Inform MatrixControl about expand/collapse of TreeView</td></tr>
+</table>
+<h4>Detailed information of the modifications in the build :</h4>
+<table cellpadding="5">
+<tr><td><b>PeterForstmeier</b></td><td>Inform MatrixControl about expand/collapse of TreeView</td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Controls/TreeMatrixControl.xaml</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Controls/TreeMatrixControl.xaml.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/DependencyTreeNode.cs</font></td></tr>
+</table>
+]]></encoded>
+    </item>
+    <item>
+      <title>Build 30 : Success  2 changed files found in build  First Comment : fix typo</title>
+      <description>2 changed files found in build</description>
+      <guid>a6ac6336-9f69-4c5b-8fd5-08179e834269</guid>
+      <pubDate>Sun, 04 Sep 2011 14:18:32 GMT</pubDate>
+      <encoded xmlns="http://purl.org/rss/1.0/modules/content/"><![CDATA[<h4>Modifications in build :</h4>
+<table cellpadding="5">
+<tr><td>PeterForstmeier</td><td>fix typo</td></tr>
+</table>
+<h4>Detailed information of the modifications in the build :</h4>
+<table cellpadding="5">
+<tr><td><b>PeterForstmeier</b></td><td>fix typo</td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Controls/TreeMatrixControl.xaml.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/MainWindowTranslationModel.cs</font></td></tr>
+</table>
+]]></encoded>
+    </item>
+    <item>
+      <title>Build 30 : Exception  No changed files found in build  </title>
+      <description>No changed files found in build</description>
+      <guid>c1bca1ae-d8d7-436b-8f20-f368c815aaf5</guid>
+      <pubDate>Sun, 04 Sep 2011 15:04:34 GMT</pubDate>
+    </item>
+    <item>
+      <title>Build 30 : Exception  No changed files found in build  </title>
+      <description>No changed files found in build</description>
+      <guid>0463d6c7-4140-40b0-8746-339a349a69af</guid>
+      <pubDate>Sun, 04 Sep 2011 15:05:56 GMT</pubDate>
+    </item>
+    <item>
+      <title>Build 31 : Failure  1 changed file found in build  First Comment : Added hack to make SharpDevelop 4.2 load AddIns written for SharpDevelop 4.1.</title>
+      <description>1 changed file found in build</description>
+      <guid>c9e2be83-3657-498b-aa8f-5b52f845a8f5</guid>
+      <pubDate>Sun, 04 Sep 2011 15:36:53 GMT</pubDate>
+      <encoded xmlns="http://purl.org/rss/1.0/modules/content/"><![CDATA[<h4>Modifications in build :</h4>
+<table cellpadding="5">
+<tr><td>Daniel Grunwald</td><td>Added hack to make SharpDevelop 4.2 load AddIns written for SharpDevelop 4.1.</td></tr>
+</table>
+<h4>Detailed information of the modifications in the build :</h4>
+<table cellpadding="5">
+<tr><td><b>Daniel Grunwald</b></td><td>Added hack to make SharpDevelop 4.2 load AddIns written for SharpDevelop 4.1.</td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/Main/Core/Project/Src/AddInTree/AddIn/AddInReference.cs</font></td></tr>
+</table>
+]]></encoded>
+    </item>
+    <item>
+      <title>Build 31 : Success  No changed files found in build  </title>
+      <description>No changed files found in build</description>
+      <guid>c68bc333-bf6c-4179-b837-ae6d79f9abc9</guid>
+      <pubDate>Sun, 04 Sep 2011 15:52:58 GMT</pubDate>
+    </item>
+    <item>
+      <title>Build 32 : Success  4 changed files found in build  First Comment : Merge branch 'master' of github.com:icsharpcode/SharpDevelop</title>
+      <description>4 changed files found in build</description>
+      <guid>100ba81c-08f7-4503-b95a-8f20ddf011da</guid>
+      <pubDate>Sun, 04 Sep 2011 16:09:19 GMT</pubDate>
+      <encoded xmlns="http://purl.org/rss/1.0/modules/content/"><![CDATA[<h4>Modifications in build :</h4>
+<table cellpadding="5">
+<tr><td>PeterForstmeier</td><td>Merge branch 'master' of github.com:icsharpcode/SharpDevelop</td></tr>
+<tr><td>PeterForstmeier</td><td>ViewModel - MainWindow.xaml</td></tr>
+</table>
+<h4>Detailed information of the modifications in the build :</h4>
+<table cellpadding="5">
+<tr><td><b>PeterForstmeier</b></td><td>Merge branch 'master' of github.com:icsharpcode/SharpDevelop</td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/MainWindow.xaml.cs</font></td></tr>
+<tr><td><b>PeterForstmeier</b></td><td>ViewModel - MainWindow.xaml</td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/MainWindow.xaml</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/MainWindow.xaml.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/MainWindowTranslationModel.cs</font></td></tr>
+</table>
+]]></encoded>
+    </item>
+    <item>
+      <title>Build 33 : Success  2 changed files found in build  First Comment : Fix memory leak with drawing to bitmap.</title>
+      <description>2 changed files found in build</description>
+      <guid>b755ddf0-221c-430f-a436-720cf8707541</guid>
+      <pubDate>Sun, 04 Sep 2011 17:19:19 GMT</pubDate>
+      <encoded xmlns="http://purl.org/rss/1.0/modules/content/"><![CDATA[<h4>Modifications in build :</h4>
+<table cellpadding="5">
+<tr><td>Tomas Linhart</td><td>Fix memory leak with drawing to bitmap.</td></tr>
+</table>
+<h4>Detailed information of the modifications in the build :</h4>
+<table cellpadding="5">
+<tr><td><b>Tomas Linhart</b></td><td>Fix memory leak with drawing to bitmap.</td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Controls/MatrixControl.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Utility/Helper.cs</font></td></tr>
+</table>
+]]></encoded>
+    </item>
+    <item>
+      <title>Build 34 : Success  1 changed file found in build  First Comment : Add HighlightLine method to matrix control.</title>
+      <description>1 changed file found in build</description>
+      <guid>e20bfe48-0ab5-4456-b3ef-cb4567248493</guid>
+      <pubDate>Sun, 04 Sep 2011 18:11:06 GMT</pubDate>
+      <encoded xmlns="http://purl.org/rss/1.0/modules/content/"><![CDATA[<h4>Modifications in build :</h4>
+<table cellpadding="5">
+<tr><td>Tomas Linhart</td><td>Add HighlightLine method to matrix control.</td></tr>
+</table>
+<h4>Detailed information of the modifications in the build :</h4>
+<table cellpadding="5">
+<tr><td><b>Tomas Linhart</b></td><td>Add HighlightLine method to matrix control.</td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Controls/MatrixControl.cs</font></td></tr>
+</table>
+]]></encoded>
+    </item>
+    <item>
+      <title>Build 35 : Success  7 changed files found in build  First Comment : MouseOver for SharpTree</title>
+      <description>7 changed files found in build</description>
+      <guid>b56fbde1-7b05-45cd-b5cd-4cd5b5687e05</guid>
+      <pubDate>Sun, 04 Sep 2011 18:34:29 GMT</pubDate>
+      <encoded xmlns="http://purl.org/rss/1.0/modules/content/"><![CDATA[<h4>Modifications in build :</h4>
+<table cellpadding="5">
+<tr><td>PeterForstmeier</td><td>MouseOver for SharpTree</td></tr>
+<tr><td>PeterForstmeier</td><td>Merge branch 'master' of github.com:icsharpcode/SharpDevelop</td></tr>
+<tr><td>PeterForstmeier</td><td>Marking element</td></tr>
+</table>
+<h4>Detailed information of the modifications in the build :</h4>
+<table cellpadding="5">
+<tr><td><b>PeterForstmeier</b></td><td>MouseOver for SharpTree</td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Controls/TreeMatrixControl.xaml.cs</font></td></tr>
+<tr><td><b>PeterForstmeier</b></td><td>Merge branch 'master' of github.com:icsharpcode/SharpDevelop</td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Utility/Helper.cs</font></td></tr>
+<tr><td><b>PeterForstmeier</b></td><td>Marking element</td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Controls/TreeMatrixControl.xaml.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/MainWindow.xaml</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/MainWindow.xaml.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/MainWindowTranslationModel.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Utility/Helper.cs</font></td></tr>
+</table>
+]]></encoded>
+    </item>
+    <item>
+      <title>Build 36 : Success  2 changed files found in build  First Comment : Update MainWindow</title>
+      <description>2 changed files found in build</description>
+      <guid>a4f4b6aa-dce5-443a-943c-690e933721e4</guid>
+      <pubDate>Sun, 04 Sep 2011 18:41:39 GMT</pubDate>
+      <encoded xmlns="http://purl.org/rss/1.0/modules/content/"><![CDATA[<h4>Modifications in build :</h4>
+<table cellpadding="5">
+<tr><td>PeterForstmeier</td><td>Update MainWindow</td></tr>
+</table>
+<h4>Detailed information of the modifications in the build :</h4>
+<table cellpadding="5">
+<tr><td><b>PeterForstmeier</b></td><td>Update MainWindow</td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Controls/MatrixControl.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/MainWindowTranslationModel.cs</font></td></tr>
+</table>
+]]></encoded>
+    </item>
+    <item>
+      <title>Build 37 : Success  7 changed files found in build  First Comment : Fix issue with highlighting line from tree in matrix control</title>
+      <description>7 changed files found in build</description>
+      <guid>d08dbbed-69e6-4f7a-b40d-4b170f8b3a6e</guid>
+      <pubDate>Sun, 04 Sep 2011 18:55:59 GMT</pubDate>
+      <encoded xmlns="http://purl.org/rss/1.0/modules/content/"><![CDATA[<h4>Modifications in build :</h4>
+<table cellpadding="5">
+<tr><td>Tomas Linhart</td><td>Fix issue with highlighting line from tree in matrix control</td></tr>
+</table>
+<h4>Detailed information of the modifications in the build :</h4>
+<table cellpadding="5">
+<tr><td><b>Tomas Linhart</b></td><td>Fix issue with highlighting line from tree in matrix control</td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Controls/DependencyColorizer.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Controls/DependencyMatrix.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Controls/MatrixControl.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Controls/TreeMatrixControl.xaml.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Field.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Method.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Relationship.cs</font></td></tr>
+</table>
+]]></encoded>
+    </item>
+    <item>
+      <title>Build 38 : Success  3 changed files found in build  First Comment : Merge branch 'master' of github.com:icsharpcode/SharpDevelop</title>
+      <description>3 changed files found in build</description>
+      <guid>453ff3dc-b68f-46b8-8e69-442fdb5850b1</guid>
+      <pubDate>Sun, 04 Sep 2011 19:11:17 GMT</pubDate>
+      <encoded xmlns="http://purl.org/rss/1.0/modules/content/"><![CDATA[<h4>Modifications in build :</h4>
+<table cellpadding="5">
+<tr><td>PeterForstmeier</td><td>Merge branch 'master' of github.com:icsharpcode/SharpDevelop</td></tr>
+<tr><td>PeterForstmeier</td><td>Cleanup MouseMove</td></tr>
+</table>
+<h4>Detailed information of the modifications in the build :</h4>
+<table cellpadding="5">
+<tr><td><b>PeterForstmeier</b></td><td>Merge branch 'master' of github.com:icsharpcode/SharpDevelop</td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Controls/TreeMatrixControl.xaml.cs</font></td></tr>
+<tr><td><b>PeterForstmeier</b></td><td>Cleanup MouseMove</td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Controls/TreeMatrixControl.xaml</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Controls/TreeMatrixControl.xaml.cs</font></td></tr>
+</table>
+]]></encoded>
+    </item>
+    <item>
+      <title>Build 39 : Success  3 changed files found in build  First Comment : Change behavior of scrollbar for matrix control and improvements for coloring and some other improvements.</title>
+      <description>3 changed files found in build</description>
+      <guid>76880710-bb69-488f-ad80-b9aff236509a</guid>
+      <pubDate>Sun, 04 Sep 2011 21:07:56 GMT</pubDate>
+      <encoded xmlns="http://purl.org/rss/1.0/modules/content/"><![CDATA[<h4>Modifications in build :</h4>
+<table cellpadding="5">
+<tr><td>Tomas Linhart</td><td>Change behavior of scrollbar for matrix control and improvements for coloring and some other improvements.</td></tr>
+</table>
+<h4>Detailed information of the modifications in the build :</h4>
+<table cellpadding="5">
+<tr><td><b>Tomas Linhart</b></td><td>Change behavior of scrollbar for matrix control and improvements for coloring and some other improvements.</td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Controls/MatrixControl.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Utility/Helper.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Utility/Matrix.cs</font></td></tr>
+</table>
+]]></encoded>
+    </item>
+    <item>
+      <title>Build 39 : Exception  No changed files found in build  </title>
+      <description>No changed files found in build</description>
+      <guid>f988ec5f-2dff-4012-8905-f3285983f97f</guid>
+      <pubDate>Mon, 05 Sep 2011 07:02:27 GMT</pubDate>
+    </item>
+    <item>
+      <title>Build 40 : Success  1 changed file found in build  First Comment : c</title>
+      <description>1 changed file found in build</description>
+      <guid>d1b1dba0-fce6-4c6c-9da0-86f64300eb9f</guid>
+      <pubDate>Mon, 05 Sep 2011 09:14:17 GMT</pubDate>
+      <encoded xmlns="http://purl.org/rss/1.0/modules/content/"><![CDATA[<h4>Modifications in build :</h4>
+<table cellpadding="5">
+<tr><td>PeterForstmeier</td><td>c</td></tr>
+</table>
+<h4>Detailed information of the modifications in the build :</h4>
+<table cellpadding="5">
+<tr><td><b>PeterForstmeier</b></td><td>c</td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/MainWindowTranslationModel.cs</font></td></tr>
+</table>
+]]></encoded>
+    </item>
+    <item>
+      <title>Build 41 : Success  5 changed files found in build  First Comment : Matrix control now shows real data.</title>
+      <description>5 changed files found in build</description>
+      <guid>c423a5f8-9aa3-427b-a1fc-ba615797ac89</guid>
+      <pubDate>Mon, 05 Sep 2011 09:21:33 GMT</pubDate>
+      <encoded xmlns="http://purl.org/rss/1.0/modules/content/"><![CDATA[<h4>Modifications in build :</h4>
+<table cellpadding="5">
+<tr><td>Tomas Linhart</td><td>Matrix control now shows real data.</td></tr>
+</table>
+<h4>Detailed information of the modifications in the build :</h4>
+<table cellpadding="5">
+<tr><td><b>Tomas Linhart</b></td><td>Matrix control now shows real data.</td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Field.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Method.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Namespace.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Type.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Utility/Matrix.cs</font></td></tr>
+</table>
+]]></encoded>
+    </item>
+    <item>
+      <title>Build 42 : Success  2 changed files found in build  First Comment : Work on DataBinding in MainForm (text are bound to localice)</title>
+      <description>2 changed files found in build</description>
+      <guid>a9a44311-087a-45a6-b094-eced42ee4402</guid>
+      <pubDate>Mon, 05 Sep 2011 10:20:28 GMT</pubDate>
+      <encoded xmlns="http://purl.org/rss/1.0/modules/content/"><![CDATA[<h4>Modifications in build :</h4>
+<table cellpadding="5">
+<tr><td>PeterForstmeier</td><td>Work on DataBinding in MainForm (text are bound to localice)</td></tr>
+</table>
+<h4>Detailed information of the modifications in the build :</h4>
+<table cellpadding="5">
+<tr><td><b>PeterForstmeier</b></td><td>Work on DataBinding in MainForm (text are bound to localice)</td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/MainWindow.xaml</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/MainWindowTranslationModel.cs</font></td></tr>
+</table>
+]]></encoded>
+    </item>
+    <item>
+      <title>Build 43 : Success  26 changed files found in build  First Comment : Fix SD-1866: support for async/await in code completion.</title>
+      <description>26 changed files found in build</description>
+      <guid>baa7e6f5-503d-42e8-a782-798675207151</guid>
+      <pubDate>Mon, 05 Sep 2011 12:15:07 GMT</pubDate>
+      <encoded xmlns="http://purl.org/rss/1.0/modules/content/"><![CDATA[<h4>Modifications in build :</h4>
+<table cellpadding="5">
+<tr><td>Daniel Grunwald</td><td>Fix SD-1866: support for async/await in code completion.</td></tr>
+</table>
+<h4>Detailed information of the modifications in the build :</h4>
+<table cellpadding="5">
+<tr><td><b>Daniel Grunwald</b></td><td>Fix SD-1866: support for async/await in code completion.</td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/Libraries/AvalonEdit/ICSharpCode.AvalonEdit/Highlighting/Resources/CSharp-Mode.xshd</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/Libraries/NRefactory/NRefactoryASTGenerator/AST/Expressions.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/Libraries/NRefactory/Project/Src/Ast/Enums.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/Libraries/NRefactory/Project/Src/Ast/Generated.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/Libraries/NRefactory/Project/Src/IAstVisitor.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/Libraries/NRefactory/Project/Src/Lexer/CSharp/KeywordList.txt</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/Libraries/NRefactory/Project/Src/Lexer/CSharp/Keywords.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/Libraries/NRefactory/Project/Src/Lexer/CSharp/Tokens.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/Libraries/NRefactory/Project/Src/Lexer/VBNet/Keywords.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/Libraries/NRefactory/Project/Src/Lexer/VBNet/Tokens.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/Libraries/NRefactory/Project/Src/Parser/CSharp/Parser.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/Libraries/NRefactory/Project/Src/Parser/CSharp/cs.ATG</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/Libraries/NRefactory/Project/Src/PrettyPrinter/CSharp/CSharpOutputVisitor.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/Libraries/NRefactory/Project/Src/PrettyPrinter/VBNet/VBNetOutputVisitor.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/Libraries/NRefactory/Project/Src/Visitors/AbstractASTVisitor.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/Libraries/NRefactory/Project/Src/Visitors/AbstractAstTransformer.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/Libraries/NRefactory/Project/Src/Visitors/NodeTrackingAstVisitor.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/Libraries/NRefactory/Project/Src/Visitors/NotImplementedAstVisitor.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/Libraries/NRefactory/Test/Lexer/CSharp/LexerTests.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/Libraries/NRefactory/Test/Lexer/VBNet/LexerTests.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/Libraries/NRefactory/Test/Parser/Expressions/AnonymousMethodTests.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/Libraries/NRefactory/Test/Parser/Expressions/IdentifierExpressionTests.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/Libraries/NRefactory/Test/Parser/Expressions/LambdaExpressionTests.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/Libraries/NRefactory/Test/Parser/Expressions/UnaryOperatorExpressionTests.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/Libraries/NRefactory/Test/Parser/TypeLevel/MethodDeclarationTests.cs</font></td></tr>
+<tr><td><font size=2>Modified</font></td><td><font size=2>src/Main/ICSharpCode.SharpDevelop.Dom/Project/Src/NRefactoryResolver/ResolveVisitor.cs</font></td></tr>
+</table>
+]]></encoded>
+    </item>
+  </channel>
+</rss>

@@ -14,4 +14,11 @@ module Build
     )
   end
 
+  def ccnet_at(rss_feed_url, storage_path)
+    Server.new(
+      Feed.on(rss_feed_url, CruiseControlNetParser.new), 
+      Storage.new(storage_path)
+    )
+  end
+
 end

@@ -1,0 +1,30 @@
+<rss version="2.0">
+  <channel>
+    <title>CruiseControl.Net - SharpDevelop-MAIN-CI</title>
+    <link>http://build.sharpdevelop.net/ccnet/</link>
+    <description>Latest build results for 'SharpDevelop-MAIN-CI'</description>
+    <language>en</language>
+    <ttl>5</ttl>
+    <generator>CruiseControl.Net</generator>
+	    <item>
+	      <title>Build 28 : Success  5 changed files found in build  First Comment : Visibility support for Matrix Control.</title>
+	      <description>5 changed files found in build</description>
+	      <guid>8edf502e-80bb-4ef5-95f4-09ae94aef493</guid>
+	      <pubDate>Sun, 04 Sep 2011 13:49:00 GMT</pubDate>
+	      <encoded xmlns="http://purl.org/rss/1.0/modules/content/"><![CDATA[<h4>Modifications in build :</h4>
+	<table cellpadding="5">
+	<tr><td>Tomas Linhart</td><td>Visibility support for Matrix Control.</td></tr>
+	</table>
+	<h4>Detailed information of the modifications in the build :</h4>
+	<table cellpadding="5">
+	<tr><td><b>Tomas Linhart</b></td><td>Visibility support for Matrix Control.</td></tr>
+	<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/CodeQualityAnalysis.csproj</font></td></tr>
+	<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Controls/DependencyMatrix.cs</font></td></tr>
+	<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Controls/MatrixControl.cs</font></td></tr>
+	<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Utility/Matrix.cs</font></td></tr>
+	<tr><td><font size=2>Added</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Utility/VisibleMatrix.cs</font></td></tr>
+	</table>
+	]]></encoded>
+	    </item>
+  </channel>
+</rss>
