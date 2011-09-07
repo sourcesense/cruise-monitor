@@ -26,5 +26,23 @@
 	</table>
 	]]></encoded>
 	    </item>
+		    <item>
+		      <title>Build 29 : Success  3 changed files found in build  First Comment : Inform MatrixControl about expand/collapse of TreeView</title>
+		      <description>3 changed files found in build</description>
+		      <guid>c4f2f100-0962-4b3c-a9ec-0618863f184f</guid>
+		      <pubDate>Sun, 04 Sep 2011 13:59:12 GMT</pubDate>
+		      <encoded xmlns="http://purl.org/rss/1.0/modules/content/"><![CDATA[<h4>Modifications in build :</h4>
+		<table cellpadding="5">
+		<tr><td>PeterForstmeier</td><td>Inform MatrixControl about expand/collapse of TreeView</td></tr>
+		</table>
+		<h4>Detailed information of the modifications in the build :</h4>
+		<table cellpadding="5">
+		<tr><td><b>PeterForstmeier</b></td><td>Inform MatrixControl about expand/collapse of TreeView</td></tr>
+		<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Controls/TreeMatrixControl.xaml</font></td></tr>
+		<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/Controls/TreeMatrixControl.xaml.cs</font></td></tr>
+		<tr><td><font size=2>Modified</font></td><td><font size=2>src/AddIns/Analysis/CodeQuality/Src/DependencyTreeNode.cs</font></td></tr>
+		</table>
+		]]></encoded>
+		    </item>
   </channel>
 </rss>

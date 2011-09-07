@@ -3,6 +3,11 @@ require 'rake/testtask'
 
 task :default => :'test:all'
 
+namespace :info do
+  task :clean do
+  end
+end
+
 namespace :test do 
   task :all => [ :unit, :integration, :acceptance ]
   
