@@ -2,7 +2,9 @@
 + don't notify success if build is still clean
 + don't update latest.build.info if nothing changed
 - minimal configuration: server/port, project name
-- support for CruiseControl and CruiseControl.NET
+- support for CruiseControl
++ support for CruiseControl.NET
 + support for Hudson
 - multiple projects monitoring
 - rdoc documentation
+- run on Windows
