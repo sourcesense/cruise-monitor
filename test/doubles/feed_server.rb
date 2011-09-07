@@ -8,7 +8,7 @@ Date: Mon, 23 May 2005 22:38:34 GMT
 Server: Apache/1.3.3.7 (Unix)  (Red-Hat/Linux)
 Last-Modified: Wed, 08 Jan 2003 23:11:55 GMT
 Accept-Ranges: bytes
-Content-Length: 438
+Content-Length: @CONTENT-LENGTH@
 Connection: close
 Content-Type: text/html; charset=UTF-8
 
@@ -26,6 +26,8 @@ Content-Type: text/html; charset=UTF-8
 
     def serve(io)
       content = Utils.read_from(@feed_path)
-      io.puts("#{TEMPLATE}#{content}")
+      headers = TEMPLATE.gsub("@CONTENT-LENGTH@", "#{content.size}")
+
+      io.puts("#{headers}#{content}")
     end
 end

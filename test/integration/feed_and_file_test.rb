@@ -67,22 +67,25 @@ class RssAndFileTest < Test::Unit::TestCase
     assert @notifier.has_warned
   end
   
-  def test_support_ccnet_on_success
+  def test_support_ccnet_feed_on_success
     @server.prepare(feed_file('cruisecontrol.net.success.rss'))
-
     feed = Feed.on(ANY_URL, CruiseControlNetParser.new)
-    info = feed.latest_info
     
-    assert_equal 'Cruise SharpDevelop-MAIN-CI 28 success', info
+    assert_equal 'Cruise SharpDevelop-MAIN-CI 28 success', feed.latest_info
   end
   
-  def test_support_ccnet_on_failures
+  def test_support_ccnet_feed_on_failures
     @server.prepare(feed_file('cruisecontrol.net.failed.rss'))
-  
     feed = Feed.on(ANY_URL, CruiseControlNetParser.new)
-    info = feed.latest_info
     
-    assert_equal 'Cruise SharpDevelop-MAIN-CI 30 failed', info
+    assert_equal 'Cruise SharpDevelop-MAIN-CI 30 failed', feed.latest_info
+  end
+
+  def test_support_ccnet_page_on_success
+    @server.prepare(feed_file('cruisecontrol.net.success.html'))
+    feed = Feed.on(ANY_URL, CruiseControlNetHtmlParser.new)
+    
+    assert_equal 'Cruise SharpDevelop-MAIN-CI 43 success', feed.latest_info
   end
 
 end
