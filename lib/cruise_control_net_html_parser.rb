@@ -6,9 +6,7 @@ class CruiseControlNetHtmlParser
 
     status = as_status(Text.words_in(item_title).at(2))
     if(status == 'failed')
-      date = Text.words_in(item_title).at(0)
-      time = Text.words_in(item_title).at(1)
-      number = as_timestamp(date, time)
+      number = as_timestamp(item_title)
     else
       number = as_number(Text.words_in(item_title).at(2))
     end
@@ -27,7 +25,10 @@ private
     return 'success'
   end
   
-  def as_timestamp(date, time)
+  def as_timestamp(title)
+    date = Text.words_in(title).at(0)
+    time = Text.words_in(title).at(1)
+
     "#{date.gsub('-', '')}#{time.gsub(':', '')}"
   end
   

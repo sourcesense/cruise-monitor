@@ -3,8 +3,8 @@
 Cruise-monitor is, well, a monitor to CruiseControl build status, via RSS feed. It uses
 MacOS 'say' command for notifications.
 
-It then turned out to be quite good to integrate with other build servers: so far, only 
-CriseControl.rb and Hudson are supported, but plans are to support CC and CC.NET as well (see TODO).
+It then turned out to be quite good to integrate with other build servers: CriseControl.rb, 
+CruiseControl.NET and Hudson are supported, plans are to support CCT as well (see TODO).
 
 For any additional info and documentation, please refer to:
 	https://github.com/sourcesense/cruise-monitor/wiki
