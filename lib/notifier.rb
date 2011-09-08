@@ -11,7 +11,7 @@ class Notifier
 protected
 
   def say(message)
-    system "say #{message}"
+    system "say \"#{message}\""
   end
   
 end
