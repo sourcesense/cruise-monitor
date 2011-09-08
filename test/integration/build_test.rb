@@ -1,9 +1,11 @@
 require File.dirname(__FILE__) + '/../test_helper'
+require 'tmpdir'
+
 include Build
 
 class BuildTest < Test::Unit::TestCase
   
-  STORAGE_FILE = '/tmp/latest.info'
+  STORAGE_FILE = Dir.tmpdir + '/latest.info'
   
   def test_cruise_rb
     server = cruise_at("", STORAGE_FILE)

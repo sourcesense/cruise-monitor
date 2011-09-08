@@ -1,9 +1,11 @@
 require File.dirname(__FILE__) + '/../test_helper'
+require 'tmpdir'
+
 include Build
 
 class FeedParsingTest < Test::Unit::TestCase
   
-  STORAGE_FILE = '/tmp/latest.info'
+  STORAGE_FILE = Dir.tmpdir + '/latest.info'
   LOCAL_URL = 'http://localhost:10123/any-resource'
   
   def setup

@@ -1,8 +1,9 @@
 require File.dirname(__FILE__) + '/../test_helper'
+require 'tmpdir'
 
 class StorageTest < Test::Unit::TestCase
   
-  STORAGE_TXT = '/tmp/storage.txt'
+  STORAGE_TXT = Dir.tmpdir + '/storage.txt'
   
   def setup
     Utils.delete_if_exists(STORAGE_TXT)
