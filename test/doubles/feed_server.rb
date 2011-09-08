@@ -26,9 +26,11 @@ Content-Type: text/html; charset=UTF-8
     end
 
     def serve(io)
+     loop do
       content = Utils.read_from(@feed_path)
       headers = TEMPLATE.gsub("@CONTENT-LENGTH@", "#{content.size}")
 
       io.puts("#{headers}#{content}")
+     end
     end
 end
