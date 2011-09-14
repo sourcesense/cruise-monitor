@@ -16,6 +16,10 @@ Cruise-monitor is a ruby script. It requires gem and rake.
 First install required gems:
 	sudo gem install httpclient nokogiri
 
+Please, note that nokogiri requires libxml2 XML library. Refer to this page 
+for installation info:
+	http://nokogiri.org/tutorials/installing_nokogiri.html
+
 Then, run all tests with:
 	rake
 
