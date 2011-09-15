@@ -21,7 +21,7 @@ private
   def as_status(string)
     status = string.gsub('(', '').gsub(')', '').downcase
 
-    return status if status == 'success'
+    return 'success' if ['success', 'stable'].include?(status)
     return 'failed'
   end
 end
