@@ -9,7 +9,7 @@ CruiseControl.NET and Hudson are supported, plans are to support CruiseControl a
 For any additional info and documentation, please refer to:
 	https://github.com/sourcesense/cruise-monitor/wiki
 
-=== How to use it
+=== How to use it:
 
 Cruise-monitor is a ruby script. It requires gem and rake.
 
@@ -41,6 +41,20 @@ Finally, you can schedule a cron job (with crontab -e), like this:
 where $path_to_cruise_monitor links to the folder you have copied Cruise-monitor into.
 
 That's it. Have fun, and keep the build clean!
+
+=== How to deploy:
+
+Cruise-monitor build services currently available are:
+
+	http://cruise.cruise-monitor.tk
+	http://jenkins.cruise-monitor.tk
+
+In order to deploy on EC2 instance (update configuration from GitHub sources and restart 
+Apache), verify EC2 credential are stored into ~/.ec2/build.pem file, then run:
+
+	./script/deploy.sh
+
+This should be enough.
 
 === License:
 

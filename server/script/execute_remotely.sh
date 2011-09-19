@@ -1,4 +1,4 @@
-build_server='ec2-79-125-72-159.eu-west-1.compute.amazonaws.com'
+build_server='www.cruise-monitor.tk'
 ec2_key="$HOME/.ec2/build.pem"
 
 if [ ! -e $ec2_key ]; then
