@@ -1,0 +1,6 @@
+<VirtualHost *:80>
+	ServerAdmin webmaster@localhost
+	ServerName www.cruise-monitor.tk
+	RewriteEngine on
+	RewriteRule ^(.+) https://github.com/sourcesense/cruise-monitor/wiki$1 [R=permanent]
+</VirtualHost>
