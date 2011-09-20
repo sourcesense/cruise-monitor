@@ -5,6 +5,8 @@
 - support for CruiseControl
 + support for CruiseControl.NET
 + support for Hudson
+- support for Jenkins
+- Project name with spaces (eg: 'ActiveMQ Protocol Buffer')
 - multiple projects monitoring
 - rdoc documentation
-- run on Windows
++ run on Windows

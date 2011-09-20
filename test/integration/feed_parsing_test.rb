@@ -78,11 +78,25 @@ class FeedParsingTest < Test::Unit::TestCase
     assert_equal 'Cruise SharpDevelop-MAIN-CI 20110905070206 failed', feed.latest_info
   end
   
-  def test_support_jenkins_on_success
-    @server.prepare(feed_file('jenkins.success.rss'))
+  def test_support_jenkins_on_success_stable
+    @server.prepare(feed_file('jenkins.success.1.rss'))
     feed = Feed.on(LOCAL_URL, HudsonParser.new)
     
     assert_equal 'Hudson Cruise-monitor 2 success', feed.latest_info
+  end
+
+  def test_support_jenkins_on_success_back_to_normal
+    @server.prepare(feed_file('jenkins.success.2.rss'))
+    feed = Feed.on(LOCAL_URL, HudsonParser.new)
+    
+    assert_equal 'Hudson ActiveMQ 7 success', feed.latest_info
+  end
+  
+  def test_support_jenkins_on_failure
+    @server.prepare(feed_file('jenkins.failed.rss'))
+    feed = Feed.on(LOCAL_URL, HudsonParser.new)
+    
+    assert_equal 'Hudson ActiveMQ 5 failed', feed.latest_info
   end
 
 end
