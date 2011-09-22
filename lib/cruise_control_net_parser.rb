@@ -13,10 +13,8 @@ class CruiseControlNetParser
 
 private
 
-  def as_status(value)
-    status = value.downcase
-
-    return status if status == 'success'
+  def as_status(string)
+    return 'success' if string.downcase == 'success'
     return 'failed'
   end
   

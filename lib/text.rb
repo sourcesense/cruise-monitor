@@ -6,7 +6,13 @@ module Text
   
   def Text.find_in(content, pattern)
     match = pattern.match(content)
-    match.to_a.first
+    return group_in(match)
+  end
+  
+private
+
+  def Text.group_in(match)
+    match.to_a.last
   end
   
 end
