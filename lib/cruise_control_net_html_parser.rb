@@ -37,7 +37,7 @@ class CruiseControlNetHtmlParser
     end
 
     def as_number(value)
-      value.gsub('(', '').gsub(')', '')
+      Text.within_brackets_in(value)
     end
   end
   

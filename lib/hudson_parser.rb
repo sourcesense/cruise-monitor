@@ -1,6 +1,5 @@
 class HudsonParser
   
-  WITHIN_BRACKETS = /\((.*)\)/
   SUCCESS_STATUSES = ['success', 'stable', 'back to normal']
   
   def parse(feed)
@@ -10,7 +9,7 @@ class HudsonParser
     
     project_name = Text.words_in(title).at(0)
     number = as_number(Text.words_in(title).at(1))
-    status = as_status(Text.find_in(title, WITHIN_BRACKETS))
+    status = as_status(Text.within_brackets_in(title))
     
     "Hudson #{project_name} #{number} #{status}"
   end

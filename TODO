@@ -5,8 +5,12 @@
 - support for CruiseControl
 + support for CruiseControl.NET
 + support for Hudson
-- support for Jenkins
++ support for Jenkins
 - Project name with spaces (eg: 'ActiveMQ Protocol Buffer')
 - multiple projects monitoring
 - rdoc documentation
 + run on Windows
++ deploy script
+- built-in scheduling
+- rake task for sync
+- rake task for deploy
