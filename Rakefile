@@ -1,6 +1,7 @@
 require 'rake'
 require 'rake/testtask'
 require 'script/ec2_instance'
+require 'script/cruise_monitor'
 
 task :default => :'test:all'
 
@@ -14,6 +15,11 @@ task :deploy do
   
   ec2 = Ec2Instance.new(options)
   ec2.execute_remotely('server/script/remote_deploy_commands.sh')
+end
+
+task :monitor do
+  monitor = CruiseMonitor::Monitor.all_builds_on(SERVER)
+  monitor.sync
 end
 
 namespace :test do 

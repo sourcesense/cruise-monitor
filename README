@@ -26,17 +26,14 @@ Then, run all tests with:
 Cruise-monitor is shipped with a sample script. Copy it to cruise_monitor.rb:
 	cp script/cruise_monitor.rb.example script/cruise_monitor.rb
 
-To configure, simply edit CRUISE_URL into script/cruise_monitor.rb.
-
-Set script executable, with
-	chmod +x ./script/cruise_monitor.rb
+To configure, simply edit SERVER_URL and SERVER into script/cruise_monitor.rb.
 
 Try to run it:
-	./script/cruise_monitor.rb
+	rake monitor
 
 Finally, you can schedule a cron job (with crontab -e), like this:
 
-	*/5 * * * * /$path_to_cruise_monitor/script/cruise_monitor.rb
+	*/5 * * * * /bin/bash -l -c 'cd $path_to_cruise_monitor && rake monitor'
 
 where $path_to_cruise_monitor links to the folder you have copied Cruise-monitor into.
 
