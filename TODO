@@ -12,5 +12,5 @@
 + run on Windows
 + deploy script
 - built-in scheduling
-- rake task for sync
++ rake task for sync
 + rake task for deploy
