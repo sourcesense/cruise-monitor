@@ -50,7 +50,11 @@ Cruise-monitor build services currently available are:
 	http://jenkins.cruise-monitor.tk
 
 In order to deploy on EC2 instance (update configuration from GitHub sources and restart 
-Apache), verify EC2 credential are stored into ~/.ec2/build.pem file, then run:
+Apache), verify EC2 credential are stored into ~/.ec2/build.pem file. Also, install net-ssh:
+
+	sudo gem install net-ssh
+
+Then run:
 
 	./script/deploy.sh
 
