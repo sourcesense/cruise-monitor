@@ -1,24 +1,26 @@
-module Text
+module CruiseMonitor
+  module Text
 
-  WITHIN_BRACKETS = /\((.*)\)/
+    WITHIN_BRACKETS = /\((.*)\)/
 
-  def Text.words_in(content)
-    content.split(' ')
-  end
+    def Text.words_in(content)
+      content.split(' ')
+    end
   
-  def Text.find_in(content, pattern)
-    match = pattern.match(content)
-    return group_in(match)
-  end
+    def Text.find_in(content, pattern)
+      match = pattern.match(content)
+      return group_in(match)
+    end
   
-  def Text.within_brackets_in(text)
-    find_in(text, WITHIN_BRACKETS)
-  end
+    def Text.within_brackets_in(text)
+      find_in(text, WITHIN_BRACKETS)
+    end
   
-private
+  private
 
-  def Text.group_in(match)
-    match.to_a.last
-  end
+    def Text.group_in(match)
+      match.to_a.last
+    end
   
+  end
 end

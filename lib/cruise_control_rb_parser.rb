@@ -1,13 +1,15 @@
-class CruiseControlRbParser
+module CruiseMonitor
+  class CruiseControlRbParser
   
-  def parse(feed)
-    title = feed.xpath('//channel/item/title').first.text
+    def parse(feed)
+      title = feed.xpath('//channel/item/title').first.text
 
-    project_name = Text.words_in(title).at(0)
-    number = Text.words_in(title).at(2)
-    status = Text.words_in(title).at(3)
+      project_name = Text.words_in(title).at(0)
+      number = Text.words_in(title).at(2)
+      status = Text.words_in(title).at(3)
     
-    "Cruise #{project_name} #{number} #{status}"
-  end
+      "Cruise #{project_name} #{number} #{status}"
+    end
   
+  end
 end
