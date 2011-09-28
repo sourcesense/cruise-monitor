@@ -1,7 +1,7 @@
 require 'rake'
 require 'rake/testtask'
 require 'script/ec2_instance'
-require 'script/cruise_monitor'
+require 'script/cruise_monitor' if File.exists?('script/cruise_monitor.rb')
 
 task :default => :'test:all'
 
