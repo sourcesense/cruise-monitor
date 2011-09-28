@@ -14,7 +14,7 @@ For any additional info and documentation, please refer to:
 Cruise-monitor is a ruby script. It requires gem and rake.
 
 First install required gems:
-	sudo gem install httpclient nokogiri
+	sudo gem install httpclient nokogiri net-ssh
 
 Please, note that nokogiri requires libxml2 XML library. Refer to this page 
 for installation info:
@@ -50,13 +50,9 @@ Cruise-monitor build services currently available are:
 	http://jenkins.cruise-monitor.tk
 
 In order to deploy on EC2 instance (update configuration from GitHub sources and restart 
-Apache), verify EC2 credential are stored into ~/.ec2/build.pem file. Also, install net-ssh:
+Apache), verify EC2 credential are stored into ~/.ec2/build.pem file. Then run:
 
-	sudo gem install net-ssh
-
-Then run:
-
-	./script/deploy.sh
+	rake deploy
 
 This should be enough.
 

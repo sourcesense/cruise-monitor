@@ -1,7 +1,20 @@
 require 'rake'
 require 'rake/testtask'
+require 'script/ec2_instance'
 
 task :default => :'test:all'
+
+desc 'Deploy on remote EC2 instances'
+task :deploy do
+  options = {
+    :host => 'www.cruise-monitor.tk',
+    :user => 'ubuntu',
+    :key => "#{ENV['HOME']}/.ec2/build.pem"
+  }
+  
+  ec2 = Ec2Instance.new(options)
+  ec2.execute_remotely('server/script/remote_deploy_commands.sh')
+end
 
 namespace :test do 
   task :all => [ :unit, :integration, :acceptance ]
