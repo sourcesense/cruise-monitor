@@ -4,7 +4,7 @@ require 'rubygems'
 require 'net/ssh'
 
 BUILD_SERVER = 'www.cruise-monitor.tk'
-EC2_KEY = "/Users/jacopo/.ec2/build.pem"
+EC2_KEY = "#{ENV['HOME']}/.ec2/build.pem"
 
 def execute_remotely(command_file)
   File.open(command_file) do |file|
