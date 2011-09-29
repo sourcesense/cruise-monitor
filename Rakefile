@@ -17,6 +17,7 @@ task :deploy do
   ec2.execute_remotely('server/script/remote_deploy_commands.sh')
 end
 
+desc 'Perform monitoring'
 task :monitor do
   monitor = CruiseMonitor::Monitor.all_builds_on(SERVER)
   monitor.sync
