@@ -27,7 +27,8 @@ task :clean do
   File.delete(CruiseMonitor::Build::DEFAULT_STORAGE_PATH)
 end
 
-namespace :test do 
+namespace :test do
+  desc 'Run all tests'
   task :all => [ :unit, :integration, :acceptance ]
   
   Rake::TestTask.new(:integration) do |t|
