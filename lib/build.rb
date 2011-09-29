@@ -1,21 +1,22 @@
 module CruiseMonitor
   module Build
+    DEFAULT_STORAGE_PATH = 'script/latest.build.info'
   
-    def cruise_at(rss_feed_url, storage_path)
+    def cruise_at(rss_feed_url, storage_path = DEFAULT_STORAGE_PATH)
       Server.new(
         Feed.on(rss_feed_url, CruiseControlRbParser.new), 
         Storage.new(storage_path)
       )
     end
   
-    def hudson_at(atom_feed_url, storage_path)
+    def hudson_at(atom_feed_url, storage_path = DEFAULT_STORAGE_PATH)
       Server.new(
         Feed.on(atom_feed_url, HudsonParser.new), 
         Storage.new(storage_path)
       )
     end
 
-    def ccnet_at(url, storage_path)
+    def ccnet_at(url, storage_path = DEFAULT_STORAGE_PATH)
       Server.new(
         Feed.on(url, ccnet_parser_for(url)), 
         Storage.new(storage_path)

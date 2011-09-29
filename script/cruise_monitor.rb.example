@@ -1,15 +1,18 @@
 Dir[File.dirname(__FILE__) + '/../lib/*.rb'].each { |file| require File.expand_path(file) }
 include CruiseMonitor::Build
 
-#config
-SERVER_URL = 'http://my.build.server/projects/myproject.rss'
-STORAGE_PATH = File.dirname(__FILE__) + '/latest.build.info'
+module CruiseMonitor
+  module Config
 
-# use Monitor.failures_on(..) to monitor failures only,
-# Monitor.all_builds_on(..) to monitor all new builds
+    # available servers:
+    # cruise_at(rss_feed_url)
+    # ccnet_at(html_page_url | rss_url)
+    # hudson_at(atom_feed_url)
+    SERVER = cruise_at('http://my.build.server/projects/myproject.rss')
+  
+    # use Monitor.failures_on(..) to monitor failures only,
+    # Monitor.all_builds_on(..) to monitor all new builds
+    MONITOR = Monitor.all_builds_on(SERVER)
 
-# available servers:
-# cruise_at(rss_feed_url, storage_path)
-# ccnet_at(html_page_url | rss_url, storage_path)
-# hudson_at(atom_feed_url, storage_path)
-SERVER = cruise_at(SERVER_URL, STORAGE_PATH)
+  end
+end

@@ -26,7 +26,7 @@ Then, run all tests with:
 Cruise-monitor is shipped with a sample script. Copy it to cruise_monitor.rb:
 	cp script/cruise_monitor.rb.example script/cruise_monitor.rb
 
-To configure, simply edit SERVER_URL and SERVER into script/cruise_monitor.rb.
+To configure, simply edit SERVER and MONITOR into script/cruise_monitor.rb.
 
 Try to run it:
 	rake monitor

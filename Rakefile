@@ -19,8 +19,12 @@ end
 
 desc 'Perform monitoring'
 task :monitor do
-  monitor = CruiseMonitor::Monitor.all_builds_on(SERVER)
-  monitor.sync
+  CruiseMonitor::Config::MONITOR.sync
+end
+
+desc 'Clean build info'
+task :clean do
+  File.delete(CruiseMonitor::Build::DEFAULT_STORAGE_PATH)
 end
 
 namespace :test do 
