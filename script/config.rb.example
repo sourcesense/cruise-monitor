@@ -5,9 +5,9 @@ module CruiseMonitor
   class Config
 
     # available servers:
-    # cruise_at(rss_feed_url)
-    # ccnet_at(html_page_url | rss_url)
-    # hudson_at(atom_feed_url)
+    #   cruise_at(rss_feed_url)
+    #   ccnet_at(html_page_url | rss_url)
+    #   hudson_at(atom_feed_url)
     SERVER = cruise_at('http://my.build.server/projects/myproject.rss')
   
     # use Monitor.failures_on(..) to monitor failures only,

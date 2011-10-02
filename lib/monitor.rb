@@ -25,10 +25,6 @@ module CruiseMonitor
         @notifier.success(@server.build_info) if should_notify_success?
       end
     end
-    
-    def storage_path
-      @server.storage_path
-    end
   
   private
 

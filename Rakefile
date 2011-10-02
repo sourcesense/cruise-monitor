@@ -22,14 +22,20 @@ end
 
 desc 'Initialize configuration'
 task :init do
+  if File.exists?(CONFIG_FILE)
+    puts "Cruise-monitor is already configured."
+    puts "Edit '#{CONFIG_FILE}' to change configuration."
+    exit 0
+  end
+  
   FileUtils.copy("#{CONFIG_FILE}.example", CONFIG_FILE)
   puts "Please, edit '#{CONFIG_FILE}' file"
 end
 
 desc 'Clean build info'
 task :clean do
-  monitor = CruiseMonitor::Config::MONITOR
-  File.delete(monitor.storage_path)
+  server = CruiseMonitor::Config::SERVER
+  File.delete(server.storage_path)
 end
 
 namespace :test do
@@ -60,7 +66,7 @@ task :deploy do
   options = {
     :host => 'www.cruise-monitor.tk',
     :user => 'ubuntu',
-    :credentials => "#{ENV['HOME']}/.ec2/build.pem"
+    :credentials => in_home_folder('.ec2/build.pem')
   }
   
   instance = CruiseMonitor::DeployInstance.new(options)
