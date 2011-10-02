@@ -34,5 +34,9 @@ Content-Type: text/html; charset=UTF-8
         io.puts("#{headers}#{content}")
        end
       end
+      
+      def url
+        "http://localhost:#{@port}/"
+      end
   end
 end
