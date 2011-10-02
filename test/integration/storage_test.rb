@@ -1,10 +1,9 @@
 require File.dirname(__FILE__) + '/../test_helper'
-require 'tmpdir'
 
 module CruiseMonitor
   class StorageTest < Test::Unit::TestCase
   
-    STORAGE_TXT = Dir.tmpdir + '/storage.txt'
+    STORAGE_TXT = Utils.temp_file('/storage.txt')
   
     def setup
       Utils.delete_if_exists(STORAGE_TXT)

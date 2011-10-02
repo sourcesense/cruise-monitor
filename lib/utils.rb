@@ -1,4 +1,5 @@
 require 'fileutils'
+require 'tmpdir'
 
 module CruiseMonitor
   module Utils
@@ -21,6 +22,14 @@ module CruiseMonitor
   
     def Utils.write_content(path, content)
       File.open(path, 'w') {|f| f.write(content) }
+    end
+    
+    def Utils.temp_dir
+      Dir.tmpdir
+    end
+    
+    def Utils.temp_file(path)
+      "#{temp_dir}/#{path}"
     end
   end
 end

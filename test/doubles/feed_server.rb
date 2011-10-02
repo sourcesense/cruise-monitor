@@ -1,5 +1,4 @@
 require 'gserver'
-require 'tmpdir'
 
 module CruiseMonitor
   class FeedServer < GServer
@@ -19,7 +18,7 @@ Content-Type: text/html; charset=UTF-8
 
       def initialize(port)
         super(port)
-        @feed_path = Dir.tmpdir
+        @feed_path = Utils.temp_dir
       end
     
       def prepare(path)
