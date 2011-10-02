@@ -29,6 +29,10 @@ module CruiseMonitor
     def was_failed
       :failed == as_symbol(@previous_info.status)
     end
+    
+    def storage_path
+      @storage.path
+    end
   
   private
 
