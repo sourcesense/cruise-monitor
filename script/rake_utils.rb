@@ -1,3 +1,3 @@
 def require_if_exists(file)
-  require file if File.exists?("#{file}.rb")
+  require file.gsub(".rb", "") if File.exists?("#{file}")
 end

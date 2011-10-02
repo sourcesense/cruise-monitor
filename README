@@ -23,10 +23,10 @@ for installation info:
 Then, run all tests with:
 	rake
 
-Cruise-monitor is shipped with a sample configure script. Copy it to config.rb:
-	cp script/config.rb.example script/config.rb
+Cruise-monitor is shipped with a sample configure script. To init the configuration, run:
+	rake init
 
-To configure, simply edit SERVER and MONITOR into script/config.rb.
+Then, simply edit SERVER and MONITOR into 'script/config.rb'.
 
 Try to run it:
 	rake monitor

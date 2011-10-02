@@ -2,14 +2,28 @@ require 'rake'
 require 'rake/testtask'
 require 'script/rake_utils'
 require 'script/deploy_instance'
-require_if_exists('script/config')
+
+CONFIG_FILE = 'script/config.rb'
+require_if_exists(CONFIG_FILE)
 
 task :default => :'test:all'
 
 desc 'Perform monitoring'
 task :monitor do
-  monitor = CruiseMonitor::Config::MONITOR
-  monitor.sync
+  begin
+    monitor = CruiseMonitor::Config::MONITOR
+    monitor.sync
+  rescue NameError
+    puts "Please, configure Cruise-monitor running:"
+    puts "  rake init"
+    puts "Then edit '#{CONFIG_FILE}' file"
+  end
+end
+
+desc 'Initialize configuration'
+task :init do
+  FileUtils.copy("#{CONFIG_FILE}.example", CONFIG_FILE)
+  puts "Please, edit '#{CONFIG_FILE}' file"
 end
 
 desc 'Clean build info'
