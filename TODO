@@ -15,3 +15,4 @@
 + rake task for sync
 + rake task for deploy
 + rake task for init configutation
+- wiki/docs under revision control
