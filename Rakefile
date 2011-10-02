@@ -1,7 +1,7 @@
 require 'rake'
 require 'rake/testtask'
 require 'script/rake_utils'
-require 'script/ec2_instance'
+require 'script/deploy_instance'
 require_if_exists('script/config')
 
 task :default => :'test:all'
@@ -46,9 +46,9 @@ task :deploy do
   options = {
     :host => 'www.cruise-monitor.tk',
     :user => 'ubuntu',
-    :key => "#{ENV['HOME']}/.ec2/build.pem"
+    :credentials => "#{ENV['HOME']}/.ec2/build.pem"
   }
   
-  ec2 = CruiseMonitor::Ec2Instance.new(options)
-  ec2.execute_remotely('server/script/remote_deploy_commands.sh')
+  instance = CruiseMonitor::DeployInstance.new(options)
+  instance.execute_remotely('server/script/remote_deploy_commands.sh')
 end
