@@ -17,6 +17,6 @@
 - built-in scheduling
 + rake task for sync
 + rake task for deploy
-+ rake task for init configutation
++ rake task for init configuration
 + wiki/docs under revision control
 	- move pictures to cruise-monitor.wiki repository
