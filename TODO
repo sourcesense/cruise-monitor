@@ -10,9 +10,13 @@
 - multiple projects monitoring
 - rdoc documentation
 + run on Windows
+	+ all tests
+	+ monitoring
+	+ scheduling
 + deploy script
 - built-in scheduling
 + rake task for sync
 + rake task for deploy
 + rake task for init configutation
-- wiki/docs under revision control
++ wiki/docs under revision control
+	- move pictures to cruise-monitor.wiki repository
