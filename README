@@ -33,9 +33,12 @@ Try to run it:
 
 Finally, you can schedule a cron job (with crontab -e), like this:
 
-	*/5 * * * * /bin/bash -l -c 'cd $path_to_cruise_monitor && rake monitor'
+	*/5 * * * * $path_to_cruise_monitor/bin/monitor.sh
 
-where $path_to_cruise_monitor links to the folder you have copied Cruise-monitor into.
+where $path_to_cruise_monitor links to the folder you have copied Cruise-monitor into. Don't forget to set
+monitor.sh as an executable file, with:
+
+	chmod +x bin/monitor.sh
 
 That's it. Have fun, and keep the build clean!
 

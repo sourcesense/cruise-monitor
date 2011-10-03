@@ -1,8 +1,20 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
 module CruiseMonitor
-  class RssAndFileTest < BaseIntegrationTest
+  class MonitoringTest < BaseIntegrationTest
     include Build
+    
+    STORAGE_FILE = Utils.temp_file('/latest.info')
+  
+    def setup
+      Utils.delete_if_exists(STORAGE_FILE)
+      super
+    end
+  
+    def teardown
+      super
+      Utils.delete_if_exists(STORAGE_FILE)
+    end
   
     def test_should_connect_to_local_feed_and_notify_success_on_build_back_clean
       Utils.write_content(STORAGE_FILE, 'myproject build 1000 failed')
